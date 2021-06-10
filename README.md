@@ -2,7 +2,7 @@
 
 It's a twitter clone with the basic functionalities.
 
-Link : https://twitter-clone-b.herokuapp.com/
+Link : https://twitter-clone-boda.herokuapp.com/
 
 ## Installation
 To get the project up and running, and view components in the browser, complete the following steps:
