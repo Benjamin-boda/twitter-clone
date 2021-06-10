@@ -1,0 +1,48 @@
+.navbar {
+    border-bottom: .05rem solid lightgray;
+    height: auto;
+    width: 100%;
+}
+
+.navbar__contents {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 90rem;
+}
+
+.navbar__logo {
+    height: 8rem;
+    width: 8rem;
+}
+
+.navbar__register {
+    background: $blue;
+    border-radius: 50rem;
+    color: white;
+    margin: 0 $l-size 0 0;
+    padding: $s-size;
+    text-decoration: none;
+}
+
+.navbar__login {
+    background: white;
+    border: .1rem solid $blue;
+    border-radius: 50rem;
+    color: $blue;
+    margin: 0 $l-size 0 0;
+    padding: $s-size;
+    text-decoration: none;
+}
+
+.navbar__register {
+    background: $blue;
+    border: none;
+    border-radius: 50rem;
+    color: white;
+    font-size: $font-size-small;
+    margin: 0 $l-size 0 0;
+    padding: $s-size;
+    text-decoration: none;
+}

@@ -1,0 +1,43 @@
+.tweetlist {
+    margin: 0 auto;
+    max-width: 90rem;
+}
+
+.tweetlist__li {
+    border: .05rem solid lightgray;
+    font-size: $font-size-small;
+    list-style-type: none;
+    margin: 0 $m-size 0 -2.5rem;
+    padding: $s-size;
+    word-break: break-all;
+}
+
+.tweetlist__text {
+    font-size: $font-size-small;
+}
+
+.tweetlist__button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: $s-size;
+}
+
+.tweetlist__remove {
+    background: lightcoral;
+    border: none;
+    border-radius: 50rem;
+    color: white;
+    margin: 0 $l-size 0 0;
+    padding: $s-size;
+    text-decoration: none;
+}
+
+.tweetlist__edit {
+    background: lightgreen;
+    border: none;
+    border-radius: 50rem;
+    color: white;
+    margin: 0 $l-size 0 0;
+    padding: $s-size;
+    text-decoration: none;
+}
