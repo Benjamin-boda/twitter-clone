@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const addTweet =  (tweet) => {
     return async function (dispatch) {
-        axios.post("http://localhost:5000/tweet/", tweet)
+        axios.post("/tweet/", tweet)
             .then((res) => {
                 console.log(res)
                 dispatch({
