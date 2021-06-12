@@ -9,8 +9,7 @@ require('dotenv').config();
 //Set up server
 const app = express();
 const PORT = process.env.PORT || 5000;
-app.use(express.static(path.join(__dirname, "build")))
-
+app.use(express.static(path.join(__dirname, '../build')))
 
 
 // Middleware
@@ -46,9 +45,9 @@ app.use("/auth", require("./routes/userRouter"));
 app.use("/tweet", require("./routes/tweetRouter"));
 
 // Server listen
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "build", "index.html"));
-});
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build'))
+})
 
 app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`);
