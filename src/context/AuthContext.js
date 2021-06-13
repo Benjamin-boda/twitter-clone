@@ -12,9 +12,9 @@ export const AuthContextProvider = (props) => {
     const dispatch = useDispatch();
 
     const getLoggedIn = async () => {
-        const loggedInRes = await axios.get("http://localhost:5000/auth/loggedIn");
+        const loggedInRes = await axios.get("/auth/loggedIn");
         setLoggedIn(loggedInRes.data)
-        const userId = await axios.get("http://localhost:5000/auth/userLogged");
+        const userId = await axios.get("/auth/userLogged");
         setCurrentUser(userId.data)
         console.log(userId.data)
 
