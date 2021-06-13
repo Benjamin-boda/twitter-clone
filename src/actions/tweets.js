@@ -19,7 +19,7 @@ export const addTweet =  (tweet) => {
 
 export const removeTweet =  (_id) => {
     return async function (dispatch) {
-        axios.post("http://localhost:5000/tweet/delete", _id)
+        axios.post("/tweet/delete", _id)
             .then(() => {
                 dispatch({
                     type: "REMOVE_TWEET",
@@ -33,7 +33,7 @@ export const removeTweet =  (_id) => {
 
 export const editTweet = (id, updates) => {
     return async function (dispatch) {
-        axios.post(`http://localhost:5000/tweet/${id}`, updates)
+        axios.post(`/tweet/${id}`, updates)
             .then(() => {
                 dispatch({
                     type: "EDIT_TWEET",
@@ -48,7 +48,7 @@ export const editTweet = (id, updates) => {
 
 export const setTweets = () => {
     return async function (dispatch) {
-        await axios.get("http://localhost:5000/tweet/")
+        await axios.get("/tweet/")
             .then((res) => {
                 dispatch({
                     type: "SET_TWEETS",
@@ -60,7 +60,7 @@ export const setTweets = () => {
 
 export const setHomepageTweets = () => {
     return async function (dispatch) {
-        await axios.get("http://localhost:5000/tweet/homepage")
+        await axios.get("/tweet/homepage")
             .then((res) => {
                 dispatch({
                     type: "SET_TWEETS",

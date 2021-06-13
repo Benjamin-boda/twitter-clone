@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const registerUser = (props) => {
     return async function (dispatch) {
-        await axios.post("http://localhost:5000/auth/", props)
+        await axios.post("/auth/", props)
             .then(() => {
                 const user = {
                     username : props.username,
@@ -21,7 +21,7 @@ export const loginUser = (props) => {
     const { username, password } = props;
 
     return async function (dispatch) {
-        await axios.post("http://localhost:5000/auth/login", { username, password })
+        await axios.post("/auth/login", { username, password })
         .then(() => {
             const user = {
                 username,
@@ -35,7 +35,7 @@ export const loginUser = (props) => {
 
 export const logoutUser = () => {
     return async function (dispatch) {
-        await axios.get("http://localhost:5000/auth/logout")
+        await axios.get("/auth/logout")
         .then( res => {
             localStorage.clear();
 
