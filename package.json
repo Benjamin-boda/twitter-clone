@@ -27,7 +27,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "nodemon server/server.js",
+    "start": "concurrently \"npm run dev\" \"npm run client\"",
+    "client": "react-scripts start",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build",
     "build": "react-scripts build",
     "dev": "nodemon server/server.js",
